@@ -1,0 +1,33 @@
+index:
+    path: /
+    defaults:
+        _controller: AppBundle:Default:index
+        _format: xml
+    methods: [POST]
+
+ping:
+    path: /Ping
+    defaults:
+        _controller: AppBundle:Client:ping
+    methods: [POST]
+
+getInputData:
+    path: /GetInputData
+    defaults:
+        _controller: AppBundle:Client:getInputData
+    methods: [POST]
+
+writeAnswer:
+    path: /WriteAnswer
+    defaults: { _controller: AppBundle:Client:writeAnswer }
+    methods: [POST]
+
+postInputData:
+    path: /PostInputData
+    defaults: { _controller: AppBundle:Server:postInputData }
+    methods: [POST]
+
+getAnswer:
+    path: /GetAnswer
+    defaults: { _controller: AppBundle:Server:getAnswer }
+    methods: [POST]
